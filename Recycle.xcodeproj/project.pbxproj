@@ -15,6 +15,8 @@
 		E465CB111EEB3C310058428F /* CellOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = E465CB101EEB3C310058428F /* CellOne.xib */; };
 		E465CB131EEB3E980058428F /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = E465CB121EEB3E980058428F /* Cells.swift */; };
 		E465CB151EEB3F1D0058428F /* CellTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = E465CB141EEB3F1D0058428F /* CellTwo.xib */; };
+		E465CB181EEB47900058428F /* RecyclableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E465CB171EEB47900058428F /* RecyclableCollectionViewCell.swift */; };
+		E465CB1A1EEB479A0058428F /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E465CB191EEB479A0058428F /* UICollectionView.swift */; };
 		E4B2F71E1EEA48EA002B13BA /* Recycle.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E4B2F71D1EEA48EA002B13BA /* Recycle.podspec */; };
 		E4B2F7201EEA4BA5002B13BA /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = E4B2F71F1EEA4BA5002B13BA /* LICENSE */; };
 /* End PBXBuildFile section */
@@ -41,6 +43,8 @@
 		E465CB101EEB3C310058428F /* CellOne.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellOne.xib; sourceTree = "<group>"; };
 		E465CB121EEB3E980058428F /* Cells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
 		E465CB141EEB3F1D0058428F /* CellTwo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellTwo.xib; sourceTree = "<group>"; };
+		E465CB171EEB47900058428F /* RecyclableCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecyclableCollectionViewCell.swift; sourceTree = "<group>"; };
+		E465CB191EEB479A0058428F /* UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		E4B2F71D1EEA48EA002B13BA /* Recycle.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Recycle.podspec; sourceTree = "<group>"; };
 		E4B2F71F1EEA4BA5002B13BA /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +91,7 @@
 		E41F5DD21EE8F0BE00F317CC /* Recycle */ = {
 			isa = PBXGroup;
 			children = (
+				E465CB161EEB47790058428F /* UICollectionView */,
 				E41F5DEA1EE8F10200F317CC /* UITableView */,
 				E41F5DD31EE8F0BE00F317CC /* Recycle.h */,
 				E41F5DD41EE8F0BE00F317CC /* Info.plist */,
@@ -121,6 +126,15 @@
 				E465CB141EEB3F1D0058428F /* CellTwo.xib */,
 			);
 			name = "UITableView Resources";
+			sourceTree = "<group>";
+		};
+		E465CB161EEB47790058428F /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				E465CB171EEB47900058428F /* RecyclableCollectionViewCell.swift */,
+				E465CB191EEB479A0058428F /* UICollectionView.swift */,
+			);
+			name = UICollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +256,8 @@
 			files = (
 				E41F5E181EE8F18300F317CC /* RecyclableTableViewCell.swift in Sources */,
 				E41F5E1A1EE8F1D000F317CC /* UITableView.swift in Sources */,
+				E465CB1A1EEB479A0058428F /* UICollectionView.swift in Sources */,
+				E465CB181EEB47900058428F /* RecyclableCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
