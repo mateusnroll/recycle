@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		E41F5DDA1EE8F0BE00F317CC /* Recycle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E41F5DD01EE8F0BE00F317CC /* Recycle.framework */; };
-		E41F5DDF1EE8F0BE00F317CC /* RecycleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F5DDE1EE8F0BE00F317CC /* RecycleTests.swift */; };
+		E41F5DDF1EE8F0BE00F317CC /* UITableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F5DDE1EE8F0BE00F317CC /* UITableViewTests.swift */; };
 		E41F5DE11EE8F0BE00F317CC /* Recycle.h in Headers */ = {isa = PBXBuildFile; fileRef = E41F5DD31EE8F0BE00F317CC /* Recycle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E41F5E181EE8F18300F317CC /* RecyclableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F5E171EE8F18300F317CC /* RecyclableTableViewCell.swift */; };
 		E41F5E1A1EE8F1D000F317CC /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F5E191EE8F1D000F317CC /* UITableView.swift */; };
+		E465CB111EEB3C310058428F /* CellOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = E465CB101EEB3C310058428F /* CellOne.xib */; };
+		E465CB131EEB3E980058428F /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = E465CB121EEB3E980058428F /* Cells.swift */; };
+		E465CB151EEB3F1D0058428F /* CellTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = E465CB141EEB3F1D0058428F /* CellTwo.xib */; };
 		E4B2F71E1EEA48EA002B13BA /* Recycle.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E4B2F71D1EEA48EA002B13BA /* Recycle.podspec */; };
 		E4B2F7201EEA4BA5002B13BA /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = E4B2F71F1EEA4BA5002B13BA /* LICENSE */; };
 /* End PBXBuildFile section */
@@ -31,10 +34,13 @@
 		E41F5DD31EE8F0BE00F317CC /* Recycle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Recycle.h; sourceTree = "<group>"; };
 		E41F5DD41EE8F0BE00F317CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E41F5DD91EE8F0BE00F317CC /* RecycleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecycleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E41F5DDE1EE8F0BE00F317CC /* RecycleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleTests.swift; sourceTree = "<group>"; };
+		E41F5DDE1EE8F0BE00F317CC /* UITableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewTests.swift; sourceTree = "<group>"; };
 		E41F5DE01EE8F0BE00F317CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E41F5E171EE8F18300F317CC /* RecyclableTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecyclableTableViewCell.swift; sourceTree = "<group>"; };
 		E41F5E191EE8F1D000F317CC /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		E465CB101EEB3C310058428F /* CellOne.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellOne.xib; sourceTree = "<group>"; };
+		E465CB121EEB3E980058428F /* Cells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
+		E465CB141EEB3F1D0058428F /* CellTwo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellTwo.xib; sourceTree = "<group>"; };
 		E4B2F71D1EEA48EA002B13BA /* Recycle.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Recycle.podspec; sourceTree = "<group>"; };
 		E4B2F71F1EEA4BA5002B13BA /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,7 +97,8 @@
 		E41F5DDD1EE8F0BE00F317CC /* RecycleTests */ = {
 			isa = PBXGroup;
 			children = (
-				E41F5DDE1EE8F0BE00F317CC /* RecycleTests.swift */,
+				E41F5DDE1EE8F0BE00F317CC /* UITableViewTests.swift */,
+				E465CB0F1EEB3C0B0058428F /* UITableView Resources */,
 				E41F5DE01EE8F0BE00F317CC /* Info.plist */,
 			);
 			path = RecycleTests;
@@ -104,6 +111,16 @@
 				E41F5E191EE8F1D000F317CC /* UITableView.swift */,
 			);
 			name = UITableView;
+			sourceTree = "<group>";
+		};
+		E465CB0F1EEB3C0B0058428F /* UITableView Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E465CB121EEB3E980058428F /* Cells.swift */,
+				E465CB101EEB3C310058428F /* CellOne.xib */,
+				E465CB141EEB3F1D0058428F /* CellTwo.xib */,
+			);
+			name = "UITableView Resources";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +228,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E465CB151EEB3F1D0058428F /* CellTwo.xib in Resources */,
+				E465CB111EEB3C310058428F /* CellOne.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,7 +249,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E41F5DDF1EE8F0BE00F317CC /* RecycleTests.swift in Sources */,
+				E41F5DDF1EE8F0BE00F317CC /* UITableViewTests.swift in Sources */,
+				E465CB131EEB3E980058428F /* Cells.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

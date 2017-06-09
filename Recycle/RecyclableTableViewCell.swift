@@ -12,7 +12,7 @@ public protocol RecyclableTableViewCell: class {
     static var identifier: String { get }
     static var nib: UINib? { get }
     static var nibName: String? { get }
-    static var bundle: String? { get }
+    static var bundle: Bundle? { get }
 }
 
 public extension RecyclableTableViewCell {
@@ -24,15 +24,15 @@ public extension RecyclableTableViewCell {
         return nil
     }
 
-    static var bundle: String? {
+    static var bundle: Bundle? {
         return nil
     }
 
     static var nib: UINib? {
         if let nibName = self.nibName {
-            return UINib(nibName: nibName, bundle: nil)
+            return UINib(nibName: nibName, bundle: self.bundle)
         } else {
-            return UINib(nibName: identifier, bundle: nil)
+            return UINib(nibName: identifier, bundle: self.bundle)
         }
     }
 }
