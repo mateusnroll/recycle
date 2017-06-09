@@ -12,6 +12,8 @@
 		E41F5DE11EE8F0BE00F317CC /* Recycle.h in Headers */ = {isa = PBXBuildFile; fileRef = E41F5DD31EE8F0BE00F317CC /* Recycle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E41F5E181EE8F18300F317CC /* RecyclableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F5E171EE8F18300F317CC /* RecyclableTableViewCell.swift */; };
 		E41F5E1A1EE8F1D000F317CC /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F5E191EE8F1D000F317CC /* UITableView.swift */; };
+		E4B2F71E1EEA48EA002B13BA /* Recycle.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E4B2F71D1EEA48EA002B13BA /* Recycle.podspec */; };
+		E4B2F7201EEA4BA5002B13BA /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = E4B2F71F1EEA4BA5002B13BA /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,8 @@
 		E41F5DE01EE8F0BE00F317CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E41F5E171EE8F18300F317CC /* RecyclableTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecyclableTableViewCell.swift; sourceTree = "<group>"; };
 		E41F5E191EE8F1D000F317CC /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		E4B2F71D1EEA48EA002B13BA /* Recycle.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Recycle.podspec; sourceTree = "<group>"; };
+		E4B2F71F1EEA4BA5002B13BA /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				E41F5DD21EE8F0BE00F317CC /* Recycle */,
 				E41F5DDD1EE8F0BE00F317CC /* RecycleTests */,
 				E41F5DD11EE8F0BE00F317CC /* Products */,
+				E4B2F71D1EEA48EA002B13BA /* Recycle.podspec */,
+				E4B2F71F1EEA4BA5002B13BA /* LICENSE */,
 			);
 			sourceTree = "<group>";
 		};
@@ -196,6 +202,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4B2F7201EEA4BA5002B13BA /* LICENSE in Resources */,
+				E4B2F71E1EEA48EA002B13BA /* Recycle.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +432,7 @@
 				E41F5DE61EE8F0BE00F317CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E41F5DE71EE8F0BE00F317CC /* Build configuration list for PBXNativeTarget "RecycleTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +441,7 @@
 				E41F5DE91EE8F0BE00F317CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
