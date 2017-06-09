@@ -9,20 +9,25 @@
 import Foundation
 
 public extension UITableView {
-    func registerRecyclableCells<T: UITableViewCell>(_ cells: T.Type...) where T: RecyclableTableViewCell {
-        guard !cells.isEmpty
-            else { return }
-
+    func registerRecyclableCells(_ cells: AnyObject...) {
         for cell in cells {
-            if let nib = cell.nib {
-                self.register(nib, forCellReuseIdentifier: cell.identifier)
+            if let cell = cell.self as? RecyclableTableViewCell.Type {
+                registerRecyclableCell(cell)
             } else {
-                self.register(cell.self, forCellReuseIdentifier: cell.identifier)
+                print("RecyclableTableViewCell: Can not register cell, does not conform to protocol.", cell)
             }
         }
     }
 
-    func recycle<T: UITableViewCell>(_ cell: T.Type) -> T? where T: RecyclableTableViewCell {
+    private func registerRecyclableCell(_ cell: RecyclableTableViewCell.Type) {
+        if let nib = cell.nib {
+            self.register(nib, forCellReuseIdentifier: cell.identifier)
+        } else {
+            self.register(cell.self, forCellReuseIdentifier: cell.identifier)
+        }
+    }
+
+    func recycle<T: RecyclableTableViewCell>(_ cell: T.Type) -> T? {
         return self.dequeueReusableCell(withIdentifier: cell.identifier) as? T
     }
 }

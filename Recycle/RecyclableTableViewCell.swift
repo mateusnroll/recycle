@@ -6,7 +6,7 @@
 //  Copyright © 2017 Mateus Pinheiro. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public protocol RecyclableTableViewCell: class {
     static var identifier: String { get }
