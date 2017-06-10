@@ -37,25 +37,25 @@ public extension UITableView {
 // MARK: - UITableViewHeaderFooterView
 
 public extension UITableView {
-    func registerRecyclableHeaderFooterViews(_ cells: AnyObject...) {
-        for cell in cells {
-            if let cell = cell.self as? Recyclable.Type {
-                registerRecyclableHeaderFooterView(cell)
+    func registerRecyclableHeaderFooterViews(_ views: AnyObject...) {
+        for view in views {
+            if let view = view.self as? Recyclable.Type {
+                registerRecyclableHeaderFooterView(view)
             } else {
-                print("[ERROR] Recyclable: Can not register cell, does not conform to protocol.", cell)
+                print("[ERROR] Recyclable: Can not register cell, does not conform to protocol.", view)
             }
         }
     }
 
-    private func registerRecyclableHeaderFooterView(_ cell: Recyclable.Type) {
-        if let nib = cell.nib {
-            self.register(nib, forHeaderFooterViewReuseIdentifier: cell.identifier)
+    private func registerRecyclableHeaderFooterView(_ view: Recyclable.Type) {
+        if let nib = view.nib {
+            self.register(nib, forHeaderFooterViewReuseIdentifier: view.identifier)
         } else {
-            self.register(cell.self, forCellReuseIdentifier: cell.identifier)
+            self.register(view.self, forCellReuseIdentifier: view.identifier)
         }
     }
 
-    func recycleHeaderFooter<T: Recyclable>(_ cell: T.Type) -> T? {
-        return self.dequeueReusableHeaderFooterView(withIdentifier: cell.identifier) as? T
+    func recycleHeaderFooter<T: Recyclable>(_ view: T.Type) -> T? {
+        return self.dequeueReusableHeaderFooterView(withIdentifier: view.identifier) as? T
     }
 }
