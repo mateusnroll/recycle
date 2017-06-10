@@ -1,21 +1,21 @@
 //
-//  RecyclableTableViewCell.swift
+//  Recyclable.swift
 //  Recycle
 //
-//  Created by Mateus Pinheiro on 07/06/17.
+//  Created by Mateus Pinheiro on 09/06/17.
 //  Copyright © 2017 Mateus Pinheiro. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-public protocol RecyclableTableViewCell: class {
+public protocol Recyclable: class {
     static var identifier: String { get }
     static var nib: UINib? { get }
     static var nibName: String? { get }
     static var bundle: Bundle? { get }
 }
 
-public extension RecyclableTableViewCell {
+public extension Recyclable {
     static var identifier: String {
         return String(describing: Self.self)
     }

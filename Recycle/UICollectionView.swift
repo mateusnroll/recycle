@@ -11,15 +11,15 @@ import Foundation
 public extension UICollectionView {
     func registerRecyclableCells(_ cells: AnyObject...) {
         for cell in cells {
-            if let cell = cell.self as? RecyclableCollectionViewCell.Type {
+            if let cell = cell.self as? Recyclable.Type {
                 registerRecyclableCell(cell)
             } else {
-                print("RecyclableCollectionViewCell: Can not register cell, does not conform to protocol.", cell)
+                print("[ERROR] Recyclable: Can not register cell, does not conform to protocol.", cell)
             }
         }
     }
 
-    private func registerRecyclableCell(_ cell: RecyclableCollectionViewCell.Type) {
+    private func registerRecyclableCell(_ cell: Recyclable.Type) {
         if let nib = cell.nib {
             self.register(nib, forCellWithReuseIdentifier: cell.identifier)
         } else {
@@ -27,7 +27,7 @@ public extension UICollectionView {
         }
     }
 
-    func recycle<T: RecyclableCollectionViewCell>(_ cell: T.Type, for indexPath: IndexPath) -> T? {
+    func recycle<T: Recyclable>(_ cell: T.Type, for indexPath: IndexPath) -> T? {
         return self.dequeueReusableCell(withReuseIdentifier: cell.identifier, for: indexPath) as? T
     }
 }
