@@ -10,7 +10,7 @@ import XCTest
 import UIKit
 @testable import Recycle
 
-class UITableViewTests: XCTestCase {
+class UITableViewCellTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -70,5 +70,4 @@ class UITableViewTests: XCTestCase {
         let cellTwo = tableView.recycle(CellTwo.self)
         XCTAssert(cellOne != nil && cellTwo != nil)
     }
-    
 }

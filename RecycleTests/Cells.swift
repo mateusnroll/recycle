@@ -9,11 +9,11 @@
 import UIKit
 @testable import Recycle
 
-class CellOne: UITableViewCell, RecyclableTableViewCell {
+class CellOne: UITableViewCell, Recyclable {
     static var bundle: Bundle? = Bundle(for: CellOne.self)
 }
 
-class CellTwo: UITableViewCell, RecyclableTableViewCell {
+class CellTwo: UITableViewCell, Recyclable {
     static var bundle: Bundle? = Bundle(for: CellTwo.self)
 }
 

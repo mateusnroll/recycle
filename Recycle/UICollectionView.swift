@@ -40,7 +40,7 @@ public extension UICollectionView {
 
      - parameter cell: Cell to be retrieved
      */
-    func recycle<T: Recyclable>(_ cell: T.Type, for indexPath: IndexPath) -> T? {
+    func recycle<T: Recyclable>(_ cell: T.Type, for indexPath: IndexPath) -> T? { 
         return self.dequeueReusableCell(withReuseIdentifier: cell.identifier, for: indexPath) as? T
     }
 }
