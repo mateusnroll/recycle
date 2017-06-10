@@ -11,6 +11,12 @@ import Foundation
 // MARK: - UITableViewCell
 
 public extension UITableView {
+    /**
+     Registers recyclable UITableViewCell(s) to the UITableView. 
+     All cells need to conform to the Recyclable protocol.
+
+     - parameter cells: One or more Recyclable-compliant cells
+     */
     func registerRecyclableCells(_ cells: AnyObject...) {
         for cell in cells {
             if let cell = cell.self as? Recyclable.Type {
@@ -29,6 +35,11 @@ public extension UITableView {
         }
     }
 
+    /**
+     Retrieves a registered recyclable cell from the UITableView
+
+     - parameter cell: Cell to be retrieved
+     */
     func recycle<T: Recyclable>(_ cell: T.Type) -> T? {
         return self.dequeueReusableCell(withIdentifier: cell.identifier) as? T
     }
@@ -37,6 +48,12 @@ public extension UITableView {
 // MARK: - UITableViewHeaderFooterView
 
 public extension UITableView {
+    /**
+     Registers recyclable UITableViewHeaderFooterView(s) to the UITableView.
+     All views need to conform to the Recyclable protocol.
+
+     - parameter views: One or more Recyclable-compliant views
+     */
     func registerRecyclableHeaderFooterViews(_ views: AnyObject...) {
         for view in views {
             if let view = view.self as? Recyclable.Type {
@@ -55,6 +72,11 @@ public extension UITableView {
         }
     }
 
+    /**
+     Retrieves a registered recyclable header/footer view from the UITableView
+
+     - parameter view: View to be retrieved
+     */
     func recycleHeaderFooter<T: Recyclable>(_ view: T.Type) -> T? {
         return self.dequeueReusableHeaderFooterView(withIdentifier: view.identifier) as? T
     }

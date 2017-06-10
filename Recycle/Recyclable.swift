@@ -8,6 +8,13 @@
 
 import Foundation
 
+/**
+ Mixin to make the cell/view recyclable to UICollecitonView 
+ and UITableView. Having a nib is optional.
+ 
+ It will look for a nib file with the same names as the class. 
+ If it can not be found, the cell will be registered without it.
+ */
 public protocol Recyclable: class {
     static var identifier: String { get }
     static var nib: UINib? { get }

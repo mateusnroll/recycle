@@ -11,6 +11,12 @@ import Foundation
 // MARK: - UICollectionViewCell
 
 public extension UICollectionView {
+    /**
+     Registers recyclable UICollectionViewsCell(s) to the UICollectionView. 
+     All cells need to conform to the Recyclable protocol.
+     
+     - parameter cells: One or more Recyclable-compliant cells
+    */
     func registerRecyclableCells(_ cells: AnyObject...) {
         for cell in cells {
             if let cell = cell.self as? Recyclable.Type {
@@ -29,6 +35,11 @@ public extension UICollectionView {
         }
     }
 
+    /**
+     Retrieves a registered recyclable cell from the UICollectionView
+
+     - parameter cell: Cell to be retrieved
+     */
     func recycle<T: Recyclable>(_ cell: T.Type, for indexPath: IndexPath) -> T? {
         return self.dequeueReusableCell(withReuseIdentifier: cell.identifier, for: indexPath) as? T
     }
@@ -37,17 +48,23 @@ public extension UICollectionView {
 // MARK: - UICollectionReusableView
 
 public extension UICollectionView {
-    func registerReusableViews(_ views: AnyObject...) {
+    /**
+     Registers recyclable UIcollectionReusableView(s) to the UICollectionView.
+     All views need to conform to the Recyclable protocol.
+
+     - parameter views: One or more Recyclable-compliant views
+     */
+    func registerSupplementaryViews(_ views: AnyObject...) {
         for view in views {
             if let view = view.self as? Recyclable.Type {
-                registerReusableView(view)
+                registerSupplementaryView(view)
             } else {
                 print("[ERROR] Recyclable: Can not register view, does not conform to protocol.", view)
             }
         }
     }
 
-    private func registerReusableView(_ view: Recyclable.Type) {
+    private func registerSupplementaryView(_ view: Recyclable.Type) {
         if let nib = view.nib {
             self.register(nib, forSupplementaryViewOfKind: view.kind ?? "", withReuseIdentifier: view.identifier)
         } else {
@@ -55,7 +72,12 @@ public extension UICollectionView {
         }
     }
 
-    func recycleReusableView<T: Recyclable>(_ view: Recyclable.Type, for indexPath: IndexPath) -> T? {
+    /**
+     Retrieves a registered recyclable supplementary view from the UICollectionView
+
+     - parameter view: View to be retrieved
+     */
+    func recycleSupplementaryView<T: Recyclable>(_ view: Recyclable.Type, for indexPath: IndexPath) -> T? {
         return self.dequeueReusableSupplementaryView(ofKind: view.kind ?? "", withReuseIdentifier: view.identifier, for: indexPath) as? T
     }
 }
