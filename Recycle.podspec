@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Recycle"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "A swift 3 library to help recycling iOS views and cells."
   s.description  = "The library helps you recycle views for one or more controllers, and avoids unecessary code duplication and verbosity."
 
