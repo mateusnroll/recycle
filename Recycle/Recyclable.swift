@@ -12,6 +12,7 @@ public protocol Recyclable: class {
     static var identifier: String { get }
     static var nib: UINib? { get }
     static var nibName: String? { get }
+    static var kind: String? { get }
     static var bundle: Bundle? { get }
 }
 
@@ -25,6 +26,10 @@ public extension Recyclable {
     }
 
     static var bundle: Bundle? {
+        return nil
+    }
+
+    static var kind: String? {
         return nil
     }
 
