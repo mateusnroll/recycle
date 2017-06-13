@@ -6,7 +6,7 @@
 ![Cocoapods v0.0.2](https://img.shields.io/cocoapods/v/Recycle.svg?style=flat)
 ![MIT License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)
 
-Recycle is a swift module for iOS that helps reusing `UITableView` and `UICollectionView` cells and views. It's more clear and less verbose than the native couterparts.
+Recycle is a swift module for iOS that helps reusing `UITableView` and `UICollectionView` cells and views. It's more clear and less verbose than the native counterparts.
 
 # Why should I use it?
 If you're tired of spending dozens of lines registering cells and then casting all dequed ones, this module is for you.
