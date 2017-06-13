@@ -9,7 +9,7 @@
 Recycle is a swift module for iOS that helps reusing `UITableView` and `UICollectionView` cells and views. It's more clear and less verbose than the native counterparts.
 
 # Why should I use it?
-If you're tired of spending dozens of lines registering cells and then casting all dequed ones, this module is for you.
+If you're tired of spending dozens of lines registering cells and then casting all dequeued ones, this module is for you.
 
 You will improve cell registering:
 ```swift
@@ -89,7 +89,7 @@ github "mateusnroll/recycle" ~> 0.0.2
 -----
 
 # UITableViewCell
-Recycle extends the UITableView to add `registerRecyclableCells` and `Recycle` functions. Both accept cells that conform to the `Recyclable` protocol.
+Recycle extends the UITableView adding `registerRecyclableCells` and `Recycle` functions. Both accept cells that conform to the `Recyclable` protocol.
 
 ### Creating a recyclable UITableViewCell
 
